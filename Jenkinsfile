@@ -1,10 +1,15 @@
 pipeline {
     agent any
 
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+    }
+
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo env.BRANCH_NAME
+                sh 'printenv'
             }
         }
     }
