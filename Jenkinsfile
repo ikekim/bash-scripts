@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'printenv'
+                echo"$GIT_BRANCH"
             }
         }
     }
