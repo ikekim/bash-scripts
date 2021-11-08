@@ -11,6 +11,7 @@ pipeline {
             steps {
                 // sh 'printenv'
                 echo "$GIT_BRANCH"
+                sh 'hello'
             }
         }
     }
