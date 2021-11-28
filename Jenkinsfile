@@ -13,9 +13,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // sh 'printenv'
+                sh 'printenv'
                 echo "$GIT_BRANCH"
-                // sh './hello.sh'
+                sh './hello.sh'
                 echo "${params.Greeting} Ike Kim!"
             }
         }
