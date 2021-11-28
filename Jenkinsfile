@@ -19,5 +19,13 @@ pipeline {
                 echo "${params.Greeting} Ike Kim!"
             }
         }
+
+        stage('TFValidate'){
+            steps {
+                dir('m8/networking/'){
+                    sh 'terraform validate'
+                    }   
+                }
+            }
     }
 }
