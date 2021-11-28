@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform"
+    }
     environment {
         DISABLE_AUTH = 'true'
         DB_ENGINE    = 'sqlite'
