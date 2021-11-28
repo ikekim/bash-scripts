@@ -22,7 +22,7 @@ pipeline {
 
         stage('TFValidate'){
             steps {
-                sh 'terraform validate'
+                sh 'terraform init'
             }   
         }
     }
