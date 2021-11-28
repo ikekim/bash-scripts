@@ -22,10 +22,8 @@ pipeline {
 
         stage('TFValidate'){
             steps {
-                dir('m8/networking/'){
-                    sh 'terraform validate'
-                    }   
-                }
-            }
+                sh 'terraform validate'
+            }   
+        }
     }
 }
